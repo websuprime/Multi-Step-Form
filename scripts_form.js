@@ -35,6 +35,7 @@ $(document).ready(function () {
     $('#next').on('click', function (e) {
         e.preventDefault();
         const currentForm = $('#multistep-form .steps:not(.d-none)');
+        const textformareaValue = currentForm.find('#textformarea').val();  // Get the value of the textarea
         const InputRadio = currentForm.find('input[type="radio"]:checked').val();
         let flag = true;
         const currentStepClass = '.' + currentForm.attr('class').split(' ').filter(c => c !== 'd-none').join('.');
